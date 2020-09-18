@@ -20,6 +20,9 @@ global:
   json_dir: "/opt/sa/feederboxsa"
   # Time the script will sleep for until running again.
   sleeptime: 15m
+  # If you would like to use the same service account for all remotes add True. 
+  # If you would like for each remote to use a seperate SA set False. (This is default)
+  same_sa: False
 # Log variables
 log:
   # Directory for logs.
