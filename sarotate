@@ -81,11 +81,7 @@ else
         COUNT=$(( ((COUNT - "$(yyq r "$st" "$cf" global.minjs)" + "$(yyq r "$st" "$cf" global.nextjs)") % MOD) + "$(yyq r "$st" "$cf" global.minjs)" ))
     jin=$(( jin + 1 ));
     done
-fi;
-log_info "SARotate will now go idle for $(yyq r "$st" "$cf" global.sleeptime)." | tee -a "$(yyq r "$st" "$cf" log.log_file)"
-sleep "$(yyq r "$st" "$cf" global.sleeptime)"
-done;
-}
+fi
 log_info "SARotate will now go idle for $(yyq r "$st" "$cf" global.sleeptime)." | tee -a "$(yyq r "$st" "$cf" log.log_file)"
 sleep "$(yyq r "$st" "$cf" global.sleeptime)"
 done;
